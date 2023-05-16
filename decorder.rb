@@ -53,4 +53,4 @@ morse_code = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... 
 decoded_message = decode_morse_code(morse_code)
 puts decoded_message
 
-# A BOX FULL OF RUBIES
+# message is A BOX FULL OF RUBIES
