@@ -1,30 +1,28 @@
 MORSE_CODE = {
-  '.-'    => 'A',
-  '-...'  => 'B',
-  '-.-.'  => 'C',
-  '-..'   => 'D',
-  '.'     => 'E',
-  '..-.'  => 'F',
-  '--.'   => 'G',
-  '....'  => 'H',
-  '..'    => 'I',
-  '.---'  => 'J',
-  '-.-'   => 'K',
-  '.-..'  => 'L',
-  '--'    => 'M',
-  '-.'    => 'N',
-  '---'   => 'O',
-  '.--.'  => 'P',
-  '--.-'  => 'Q',
-  '.-.'   => 'R',
-  '...'   => 'S',
-  '-'     => 'T',
-  '..-'   => 'U',
-  '...-'  => 'V',
-  '.--'   => 'W',
-  '-..-'  => 'X',
-  '-.--'  => 'Y',
-  '--..'  => 'Z',
+  '.-' => 'A', '-...' => 'B', '-.-.' => 'C',
+  '-..' => 'D',
+  '.' => 'E',
+  '..-.' => 'F',
+  '--.' => 'G',
+  '....' => 'H',
+  '..' => 'I',
+  '.---' => 'J',
+  '-.-' => 'K',
+  '.-..' => 'L',
+  '--' => 'M',
+  '-.' => 'N',
+  '---' => 'O',
+  '.--.' => 'P',
+  '--.-' => 'Q',
+  '.-.' => 'R',
+  '...' => 'S',
+  '-' => 'T',
+  '..-' => 'U',
+  '...-' => 'V',
+  '.--' => 'W',
+  '-..-' => 'X',
+  '-.--' => 'Y',
+  '--..' => 'Z',
   '.----' => '1',
   '..---' => '2',
   '...--' => '3',
@@ -35,15 +33,15 @@ MORSE_CODE = {
   '---..' => '8',
   '----.' => '9',
   '-----' => '0',
-  '/'     => ' ',
-}
+  '/' => ' '
+}.freeze
 
 def decode_morse_code(morse_code)
-  words = morse_code.split('   ')  # Split using triple spaces
+  words = morse_code.split('   ') # Split using triple spaces
   decoded_words = words.map do |word|
-    letters = word.split(' ')
+    letters = word.split
     decoded_letters = letters.map { |letter| MORSE_CODE[letter] }
-    decoded_letters.join('')
+    decoded_letters.join
   end
   decoded_words.join(' ')
 end
